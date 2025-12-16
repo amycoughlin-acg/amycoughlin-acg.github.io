@@ -272,7 +272,6 @@
 			"Schema-on-Read": "A hallmark of semi-structured data, where the desired form of the returned data is determined by the query",
 			"Partition Key": "A key in certain types of data resources that buckets multiple items, which could be rows or documents, under a particular category or common filter value",
 			"Gremlin": "A language used for querying/traversing across a graph data source",
-			"Firewall": "A security device, in the form of software or hardware, that filters traffic to resources, such as databases",
 			"Graph": "A type of database made up of nodes and edges, which is particularly well suited to social networking applications and certain scientific applications",
 			"JSON": "A type of semi-structured data in human-readable form and stored on \"documents\"; similar in nature to XML and YAML",
 			"Cassandra": "A wide-column database that is supported on Azure through a Cosmos DB API",
@@ -284,11 +283,12 @@
 			"Concurrency": "Describes the operation and impact on data when more than one human or system is operating over the same data at the same time",
 			"Document": "In a data sense, this describes a data container that stores human-readable, semi-structured data in the form of JSON, XML, YAML, and others",
 			"Nodes and Edges": "In graph databases, entities and relationships are also referred to as these 2 terms.",
-			"PaaS": "Most, but not all, Azure data services fall under the _____ service category, where Azure handles most of the administrative tasks of patching, backups, OS updates, and so on.",
 			"Cosmos DB": "Multi-model database designed for global distribution and high performance",
 			"Key-Value": "Semi-structured format, where entities are organized into tables with rows uniquely identified by a key and a flexible number of columns; similar to wide-column data format",
 			"SQL/Core API": "The primary interface for interacting with Cosmos DB",
-			"Redundancy": "This term has 2 meanings in the data realm: 1) The existence of the same piece of data in more than one place, which is acceptable — even optimal in some systems — but not in others; and 2) A form of replication of cloud assets that improves accessibility and disaster recovery."
+			"Redundancy": "This term has 2 meanings in the data realm: 1) The existence of the same piece of data in more than one place, which is acceptable — even optimal in some systems — but not in others; and 2) A form of replication of cloud assets that improves accessibility and disaster recovery.",
+			"Azure Blob Storage": "An Azure data resource well suited for storing and serving up unstructured data in the form of images, videos, and PDFs",
+			"Azure Files": "Azure data resource that mimics on-premises file shares and allows applications and humans to interact with it the same way they do on servers and desktop computers"			
 		};
 		gameF = {
 			"Azure Data Lake Storage Gen2": "A form of Blob storage optimized for analytics support with a hierarchical folder structure and able to store both relational and non-relational data",
@@ -471,6 +471,7 @@
     <input type="button" value="Azure Data Offerings" onClick="generate(gameB);"/>
     <input type="button" value="Interacting with Data in Azure" onClick="generate(gameC);"/>
     <input type="button" value="Relational Data Considerations on Azure" onClick="generate(gameD);"/>
+	<input type="button" value="Non-Relational Data Considerations on Azure" onClick="generate(gameE);"/>
   </form>
 
   <div class="grid-container">
