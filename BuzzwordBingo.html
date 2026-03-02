@@ -291,31 +291,31 @@
 			"Azure Files": "Azure data resource that mimics on-premises file shares and allows applications and humans to interact with it the same way they do on servers and desktop computers"			
 		};
 		gameF = {
-			"Azure Data Lake Storage Gen2": "A form of Blob storage optimized for analytics support with a hierarchical folder structure and able to store both relational and non-relational data",
-			"U-SQL": "A language used for batch jobs over large amounts of data in Azure Data Lake Analytics",
-			"OLAP": "An acronym describing a type of data workload that is most appropriate for decision support and business intelligence",
-			"Azure Databricks": "Analytics service built on Apache Spark that supports data processing, machine learning, and analytics via code in notebooks using SQL, R, Python, and Scala",
-			"Azure Analytics Service": "Based on SQL Server Analytics, an analytics service that operates over tabular and dimensional data models",
-			"Streaming Workload": "Data is gathered and processed very near to the time it is generated, from micro-seconds to a few minutes, such that the data is delivered in a near continuious fashion.",
-			"Batch Workload": "Data is gathered from one or more sources at regular intervals, usually measured in hours or days, and processed all the same time",
-			"Data Factory": "Data processing service in Azure that provides a UI to orchestrate and data processing activities; Synapse Pipelines are built on the same platform as this resource",
-			"Star Data Model": "Denormalized analytics data model that centers on fact tables, with dimension tables directly related to the facts",
-			"PolyBase": "Feature in Synapse Analytics that allows direct loading of data in other forms and formats, such as blobs in parquet format, using T-SQL",
-			"Analytics Workload": "Larger, richer datasets optimized for decision support and complex questions posed of the data",
-			"Azure Synapse Analytics": "Modern data warehouse and analytics service based on SQL Data Warehouse that also includes Spark technologies and deep integration with other big data resources",
-			"ETL": "One of 2 major approaches to data processing that performs the transformation in memory or in a staging environment before the final load into the destination data store",
-			"ELT": "One of 2 major approaches to data processing that performs the transformation step within the final storage destination",
-			"Fact": "One of 2 primary table types in star and snowflake data models, this table type often represents events or activities of the data, such as invoices or medical claims",
-			"Dimension": "One of 2 primary table types in star and snowflake data models, this table type often represents people, places, objects, and time",
-			"Apache Spark": "Open-source analytics engine used for big data processing",
-			"Azure HDInsight": "Open-source big data processing service, similar in purpose to Azure Synapse Analytics",
-			"Pipeline": "Primary orchestration structure for Data Factory, which organizes activities over datasets into a logical workflow",
-			"Ingestion": "Process of pulling data into a data platform environment from multiple sources, via either batch processing or stream processing",
-			"Snowflake Data Model": "Semi-normalized analytics data model that centers on fact tables, with dimensions related to facts but also related to other dimensions",
-			"Transformation": "Step in both of the 2 major approaches to data processing, where data is converted into a form most appropriate for analytical processing and analysis",
-			"Extract": "Step in both of the 2 major approaches to data processing, where ingested data is selectively pulled into the process for transformation and final storage",
-			"Load": "Step in both of the 2 major approaches to data processing, whereby the data comes to rest in a particular data resource for consumption by other processes or humans ",
-			"Data Processing": "The act of gathering, cleansing, transforming, and storing data from multiple sources for use by other systems and processes or for further analysis and reporting"
+		  "Analytics Workload": "A type of workload that operates over large, rich datasets optimized for decision support, business intelligence, and complex querying rather than frequent transactional updates.",
+		  "OLAP": "Online Analytical Processing; describes analytics workloads performed over large datasets at rest and optimized for complex queries and analysis.",
+		  "OLTP": "Online Transaction Processing; describes transactional workloads characterized by short, precise, high-integrity operations such as inserts, updates, and deletes.",
+		  "HTAP": "Hybrid Transactional-Analytical Processing; supports both transactional and analytical processing over the same dataset.",
+		  "Consistency": "A data concept that describes how well or how quickly data is kept in sync with itself and with replicas of itself.",
+		  "Strong Consistency": "A consistency model that ensures all replicas reflect committed transactions immediately, preserving strict transactional integrity.",
+		  "Eventual Consistency": "A database configuration that prioritizes performance and availability, allowing replicas to become consistent over time rather than immediately.",
+		  "Redundancy": "The replication of data or systems across multiple locations to improve availability, fault tolerance, and disaster recovery.",
+		  "Distributed System": "A system in which data and processing are spread across multiple servers or geographic locations that coordinate to function as a single system.",
+		  "Data Processing": "The act of gathering, cleansing, transforming, and storing data from multiple sources for analysis or operational use.",
+		  "Batch Workload": "A processing pattern where data is collected over a period of time and processed together at scheduled intervals.",
+		  "Streaming Workload": "A processing pattern where data is captured and processed in real time or near real time as it is generated.",
+		  "Micro-Batch Processing": "A form of streaming where small batches of data are processed at very short intervals, typically seconds to a few minutes.",
+		  "Latency": "The time delay between when data is generated and when it is available for processing or analysis, often measured in milliseconds.",
+		  "ETL": "Extract, Transform, Load; a data processing pattern where data is extracted from sources, transformed into the desired format, and then loaded into a destination system.",
+		  "ELT": "Extract, Load, Transform; a data processing pattern where data is extracted and loaded into a destination system first, and then transformed within that system.",
+		  "Extract": "The step in data processing where data is pulled from source systems for further processing.",
+		  "Transform": "The step in data processing where data is converted into a format suitable for analysis or storage.",
+		  "Load": "The step in data processing where transformed data is stored in a target system for consumption or analysis.",
+		  "Pipeline": "An orchestration structure that organizes and automates data processing activities into a logical workflow.",
+		  "Big Data": "Data characterized by high volume, velocity, and variety, often requiring specialized processing technologies and architectures.",
+		  "Volume": "The scale or amount of data generated and stored, often associated with big data scenarios.",
+		  "Velocity": "The speed at which data is generated, ingested, and processed.",
+		  "Variety": "The diversity of data types and formats within a data environment, including structured, semi-structured, and unstructured data.",
+		  "Azure Data Factory": "An Azure data integration service used to orchestrate and automate ETL and ELT data processing workflows, primarily for batch workloads."
 		};
 		gameG = {
 			"Dataset": "A collection of data from one or more sources used to generate visualizations that can be aggregated into reports",
@@ -472,6 +472,7 @@
     <input type="button" value="Interacting with Data in Azure" onClick="generate(gameC);"/>
     <input type="button" value="Relational Data Considerations on Azure" onClick="generate(gameD);"/>
 	<input type="button" value="Non-Relational Data Considerations on Azure" onClick="generate(gameE);"/>
+	<input type="button" value="Analytics Workloads and Pipeline Patterns" onClick="generate(gameF);"/>
   </form>
 
   <div class="grid-container">
